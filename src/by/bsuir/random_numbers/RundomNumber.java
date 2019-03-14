@@ -1,4 +1,4 @@
-package by.bsuir;
+package by.bsuir.random_numbers;
 
 import javafx.application.Application;
 import javafx.stage.Stage;

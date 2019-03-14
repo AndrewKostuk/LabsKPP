@@ -1,4 +1,4 @@
-package by.bsuir;
+package by.bsuir.random_numbers;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -33,8 +33,8 @@ public class PaneCreator {
 		root = new BorderPane();
 		scene = new Scene(root, 330, 150);
 		
-		guessButton = new Button("Угадать");
-		newRandomButton = new Button("Новое");
+		guessButton = new Button("РЈРіР°РґР°С‚СЊ");
+		newRandomButton = new Button("РќРѕРІРѕРµ");
 		helpLabel = new Label("");		
 		customerChooseTextField = new TextField();
 	}
@@ -45,14 +45,14 @@ public class PaneCreator {
 	}
 
 	public void createDefault() {
-			gridpane.setPadding(new Insets(10));//расстояние от краев окна до кнопок и текст.полей = 10
+			gridpane.setPadding(new Insets(10));//СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕС‚ РєСЂР°РµРІ РѕРєРЅР° РґРѕ РєРЅРѕРїРѕРє Рё С‚РµРєСЃС‚.РїРѕР»РµР№ = 10
 			gridpane.setHgap(100);						
 			gridpane.setVgap(10);
 			
-			for (int i = 0; i < 1; i++) {						//создать 2 колонки 
+			for (int i = 0; i < 1; i++) {						//СЃРѕР·РґР°С‚СЊ 2 РєРѕР»РѕРЅРєРё 
 			ColumnConstraints column = new ColumnConstraints(); 
-			column.setPercentWidth(100 / 2.0);					//чтобы занимала каждая 50% окна
-			gridpane.getColumnConstraints().add(column);		//и добавить на нашу сетку окна
+			column.setPercentWidth(100 / 2.0);					//С‡С‚РѕР±С‹ Р·Р°РЅРёРјР°Р»Р° РєР°Р¶РґР°СЏ 50% РѕРєРЅР°
+			gridpane.getColumnConstraints().add(column);		//Рё РґРѕР±Р°РІРёС‚СЊ РЅР° РЅР°С€Сѓ СЃРµС‚РєСѓ РѕРєРЅР°
 			}
 	}
 	
@@ -66,23 +66,23 @@ public class PaneCreator {
 	
 	
 	public void setActionsToButtons() {
-		newRandomButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
-			public void handle(ActionEvent e) { 					  // кнопка на нажатие
+		newRandomButton.setOnAction(new EventHandler<ActionEvent>() { // РєР°Рє РґРѕР»Р¶РЅР° СЂРµР°РіРёСЂРѕРІР°С‚СЊ
+			public void handle(ActionEvent e) { 					  // РєРЅРѕРїРєР° РЅР° РЅР°Р¶Р°С‚РёРµ
 				randomNumber = random.nextInt(101); 
 			} 
 		}); 
 		
-		guessButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать другая кнопка на нажатие
+		guessButton.setOnAction(new EventHandler<ActionEvent>() { // РєР°Рє РґРѕР»Р¶РЅР° СЂРµР°РіРёСЂРѕРІР°С‚СЊ РґСЂСѓРіР°СЏ РєРЅРѕРїРєР° РЅР° РЅР°Р¶Р°С‚РёРµ
 			public void handle(ActionEvent e) {
 				Integer customerChoose = Integer.parseInt(customerChooseTextField.getText());
 				if (customerChoose < randomNumber) {
-					helpLabel.setText("Ваше число меньше загаданного");
+					helpLabel.setText("Р’Р°С€Рµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ");
 				} 
 				else {
 					if (customerChoose > randomNumber) {
-						helpLabel.setText("Ваше число больше загаданного");
+						helpLabel.setText("Р’Р°С€Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ Р·Р°РіР°РґР°РЅРЅРѕРіРѕ");
 					} else
-						helpLabel.setText("Вы абсолютно правы");
+						helpLabel.setText("Р’С‹ Р°Р±СЃРѕР»СЋС‚РЅРѕ РїСЂР°РІС‹");
 				}
 			}
 		});	
