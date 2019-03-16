@@ -1,6 +1,5 @@
 bin/
-
-.classpath/
-.settings/
-.project/
+.classpath
+.project
 README.md
+.settings/
