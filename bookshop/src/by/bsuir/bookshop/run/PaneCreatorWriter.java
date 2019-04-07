@@ -16,9 +16,9 @@ import by.bsuir.bookshop.book.*;
 import by.bsuir.bookshop.people.*;
 
 public class PaneCreatorWriter {
-	private static final String BUTTON_LABEL_1 = "Создать писателя";
-	private static final String BUTTON_LABEL_2 = "Новая книга";
-	private static final String BUTTON_LABEL_3 = "Показать книги";
+	private static final String BUTTON_LABEL_1 = "РЎРѕР·РґР°С‚СЊ РїРёСЃР°С‚РµР»СЏ";
+	private static final String BUTTON_LABEL_2 = "РќР°РїРёСЃР°С‚СЊ РєРЅРёРіСѓ";
+	private static final String BUTTON_LABEL_3 = "РџРѕРєР°Р·Р°С‚СЊ РєРЅРёРіРё";
 
 	private GridPane gridpane;
 	private BorderPane root;
@@ -53,7 +53,7 @@ public class PaneCreatorWriter {
 	}
 
 	public void createDefault() {
-		gridpane.setPadding(new Insets(10)); // расстояние от краев окна до кнопок и текст.полей = 10
+		gridpane.setPadding(new Insets(10)); 
 		gridpane.setHgap(100);
 		gridpane.setVgap(10);
 	}
@@ -65,22 +65,22 @@ public class PaneCreatorWriter {
 	}
 
 	public void setActionsToButtons() {
-		createWriterButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
-			public void handle(ActionEvent e) { // кнопка на нажатие
+		createWriterButton.setOnAction(new EventHandler<ActionEvent>() { 
+			public void handle(ActionEvent e) { 
 				newWriter.setName(nameWriter.getText());
 				gridpane.add(createNewBookButton, 0, 2);
 				gridpane.add(showAllBooksButton, 0, 3);
 			}
 		});
 
-		createNewBookButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
-			public void handle(ActionEvent e) { // кнопка на нажатие
+		createNewBookButton.setOnAction(new EventHandler<ActionEvent>() { 
+			public void handle(ActionEvent e) { 
 				newWriter.writeBook();
 			}
 		});
 
-		showAllBooksButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
-			public void handle(ActionEvent e) { // кнопка на нажатие
+		showAllBooksButton.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent e) { 
 				showList = newWriter.getLiteratureList();
 				for (int i = 0; i < showList.size(); i++) {
 					opinionList = showList.get(i).getOpinions();

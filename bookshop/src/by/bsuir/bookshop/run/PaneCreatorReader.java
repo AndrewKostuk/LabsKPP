@@ -13,9 +13,9 @@ import javafx.scene.text.Text;
 import by.bsuir.bookshop.people.*;;
 
 public class PaneCreatorReader {
-	private static final String BUTTON_LABEL_1 = "Создать читателя";
-	private static final String BUTTON_LABEL_2 = "Читать книгу";
-	private static final String BUTTON_LABEL_3 = "Оставить отзыв";
+	private static final String BUTTON_LABEL_1 = "РЎРѕР·РґР°С‚СЊ С‡РёС‚Р°С‚РµР»СЏ";
+	private static final String BUTTON_LABEL_2 = "Р§РёС‚Р°С‚СЊ РєРЅРёРіСѓ";
+	private static final String BUTTON_LABEL_3 = "РћСЃС‚Р°РІРёС‚СЊ РѕС‚Р·С‹РІ";
 
 	private GridPane gridpane;
 	private BorderPane root;
@@ -46,7 +46,7 @@ public class PaneCreatorReader {
 	}
 
 	public void createDefault() {
-		gridpane.setPadding(new Insets(10)); // расстояние от краев окна до кнопок и текст.полей = 10
+		gridpane.setPadding(new Insets(10)); 
 		gridpane.setHgap(100);
 		gridpane.setVgap(10);
 	}
@@ -58,8 +58,8 @@ public class PaneCreatorReader {
 	}
 
 	public void setActionsToButtons() {
-		createReaderButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
-			public void handle(ActionEvent e) { // кнопка на нажатие
+		createReaderButton.setOnAction(new EventHandler<ActionEvent>() { 
+			public void handle(ActionEvent e) { 
 				newReader = new Reader(nameReader.getText());
 				gridpane.add(readNewBookButton, 0, 2);
 				gridpane.add(giveOpinionButton, 0, 3);
@@ -67,15 +67,15 @@ public class PaneCreatorReader {
 			}
 		});
 
-		readNewBookButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
-			public void handle(ActionEvent e) { // кнопка на нажатие
+		readNewBookButton.setOnAction(new EventHandler<ActionEvent>() { 
+			public void handle(ActionEvent e) { 
 				newReader.read(newWriter);
 				readBookMessage.setText("read book: " + newReader.getBook().getName());
 			}
 		});
 
-		giveOpinionButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
-			public void handle(ActionEvent e) { // кнопка на нажатие
+		giveOpinionButton.setOnAction(new EventHandler<ActionEvent>() { 
+			public void handle(ActionEvent e) { 
 				newWriter.setOpinion(newReader.giveOpinion(), newReader.getBookIndex());
 			}
 		});

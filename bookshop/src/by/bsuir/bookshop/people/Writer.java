@@ -32,7 +32,7 @@ public class Writer extends Human {
 
 	public void writeBook() {
 		random = new Random(System.currentTimeMillis());
-		bookPages = random.nextInt(401) + 100; // количетсво страниц новой книги от 100 до 500
+		bookPages = random.nextInt(401) + 100; //С‡РёСЃР»Рѕ СЃС‚СЂР°РЅРёС† РѕС‚ 100 РґРѕ 500
 		newBook = new Book(bookPages, "book" + bookNumber);
 		literatureList.add(newBook);
 		bookNumber++;
