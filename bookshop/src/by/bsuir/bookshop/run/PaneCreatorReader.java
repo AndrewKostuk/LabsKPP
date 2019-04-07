@@ -69,7 +69,7 @@ public class PaneCreatorReader {
 
 		readNewBookButton.setOnAction(new EventHandler<ActionEvent>() { // как должна реагировать
 			public void handle(ActionEvent e) { // кнопка на нажатие
-				newReader.read(newWriter);				
+				newReader.read(newWriter);
 				readBookMessage.setText("read book: " + newReader.getBook().getName());
 			}
 		});

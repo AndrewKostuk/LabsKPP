@@ -27,7 +27,7 @@ public class Reader extends Human {
 		return bookIndex;
 	}
 
-	public void read(Writer w) {		
+	public void read(Writer w) {
 		readingList = w.getLiteratureList();
 		random = new Random(System.currentTimeMillis());
 		bookIndex = random.nextInt(readingList.size());
