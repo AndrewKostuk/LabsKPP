@@ -6,6 +6,8 @@ import java.util.Random;
 import by.bsuir.bookshop.book.Book;
 
 public class Reader extends Human {
+	public static final String GOOD_OPINION = "like";
+	public static final String BAD_OPINION = "dislike";
 
 	private int bookIndex;
 	private Book readingBook;
@@ -36,8 +38,8 @@ public class Reader extends Human {
 
 	public String giveOpinion() {
 		if (random.nextInt(2) == 0) {
-			return "dislike";
+			return BAD_OPINION;
 		} else
-			return "like";
+			return GOOD_OPINION;
 	}
 }

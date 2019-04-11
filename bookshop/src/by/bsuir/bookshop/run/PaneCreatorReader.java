@@ -10,7 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
-import by.bsuir.bookshop.people.*;;
+import by.bsuir.bookshop.people.*;
 
 public class PaneCreatorReader {
 	private static final String BUTTON_LABEL_1 = "Создать читателя";
