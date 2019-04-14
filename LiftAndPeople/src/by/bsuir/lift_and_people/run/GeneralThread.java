@@ -3,7 +3,7 @@ package by.bsuir.lift_and_people.run;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class GenetalThread extends Application {
+public class GeneralThread extends Application {
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
@@ -12,7 +12,7 @@ public class GenetalThread extends Application {
 
 	private PaneCreatorPeople newPaneRun;
 
-	public GenetalThread() {
+	public GeneralThread() {
 		newPaneRun = new PaneCreatorPeople();
 	}
 
